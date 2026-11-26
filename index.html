@@ -5,7 +5,7 @@ description: >-
   Azucarados 4 Patas acompaña a tutores de perros y gatos con diabetes. Conocé las 4 P para detectar a tiempo,
   leé nuestras guías y sumate a la comunidad en Instagram.
 ---
-{%- assign guia = site.posts | where: "tema", "Signos" | last -%}
+{%- assign guia = site.posts | where: "tema", site.data.temas[0] | last -%}
 
 <!-- 1 · PORTADA -->
 <section class="hero" aria-labelledby="hero-titulo">
