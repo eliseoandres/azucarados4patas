@@ -1,0 +1,59 @@
+# ─────────────────────────────────────────────────────────────
+#  Azucarados 4 Patas · configuración de Jekyll
+#  Después de editar este archivo hay que reiniciar `jekyll serve`
+#  (en GitHub Pages se aplica solo al hacer commit).
+# ─────────────────────────────────────────────────────────────
+title: Azucarados 4 Patas
+tagline: Una comunidad azul para tutores de perros y gatos con diabetes
+description: >-
+  Comunidad solidaria que acompaña a tutores de perros y gatos con diabetes.
+  Guías claras, las 4 P para detectar a tiempo y una red de apoyo que vive en Instagram.
+
+url: "https://eliseoandres.github.io"
+baseurl: "/azucarados4patas"
+
+lang: es-AR
+locale: es_AR
+timezone: America/Argentina/Buenos_Aires
+
+# Instagram es el punto de encuentro principal de la comunidad
+instagram: azucarados4patas
+instagram_url: "https://www.instagram.com/azucarados4patas/"
+
+# Datos para SEO (jekyll-seo-tag genera Open Graph, Twitter Card y JSON-LD)
+logo: /assets/img/icon-512.png
+social:
+  name: Azucarados 4 Patas
+  links:
+    - "https://www.instagram.com/azucarados4patas/"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+permalink: /blog/:title/
+future: false
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      image: /assets/img/og-azucarados.jpg
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/og-azucarados.jpg
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - .pages.yml
