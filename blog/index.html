@@ -1,0 +1,43 @@
+---
+layout: default
+title: "Dejando huella: guías y notas sobre diabetes en perros y gatos"
+description: "Síntomas, rutina diaria, cuidados, mitos frecuentes y vida con diabetes animal. Notas claras para tutores de perros y gatos con diabetes."
+permalink: /blog/
+scripts:
+  - /assets/js/blog-filter.js
+---
+<section class="wrap blog">
+  <header class="blog__head">
+    <h1 class="blog__title">Dejando huella</h1>
+    <p class="blog__lead">Guías y notas para acompañar la vida con diabetes animal. Información clara, escrita por y para tutores.</p>
+  </header>
+
+  <ul class="chips chips--links" role="list" id="filtros" aria-label="Filtrar por tema">
+    <li><a href="{{ '/blog/' | relative_url }}" data-filtro="todos" aria-current="true">Todos</a></li>
+    {% for t in site.data.temas %}
+    <li><a href="{{ '/blog/' | relative_url }}?tema={{ t | slugify }}" data-filtro="{{ t | slugify }}">{{ t }}</a></li>
+    {% endfor %}
+  </ul>
+
+  {% if site.posts.size > 0 %}
+  <ul class="cards cards--list" role="list" id="notas">
+    {% for post in site.posts %}
+    <li class="card" data-tema="{{ post.tema | slugify }}">
+      {% if post.tema %}<span class="tag">{{ post.tema }}</span>{% endif %}
+      <h2 class="card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p>{{ post.description | default: post.excerpt | strip_html | truncate: 180 }}</p>
+      <p class="card__meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d/%-m/%Y" }}</time></p>
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="empty" id="sin-notas" hidden>Todavía no hay notas en este tema. Pronto vamos a sumar más.</p>
+  {% else %}
+  <p class="empty">Estamos preparando las primeras notas.</p>
+  {% endif %}
+
+  <section class="post__cta" aria-labelledby="cta-blog">
+    <h2 id="cta-blog">¿Sobre qué te gustaría leer?</h2>
+    <p>Contanos tus dudas por Instagram y las sumamos a las próximas notas.</p>
+    {% include instagram-button.html label="Escribinos por Instagram" style="coral" %}
+  </section>
+</section>

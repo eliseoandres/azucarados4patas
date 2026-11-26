@@ -1,0 +1,17 @@
+<header class="site-header">
+  <div class="wrap site-header__bar">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Azucarados 4 Patas, ir al inicio">
+      <span class="brand__mark">{% include paw.html %}</span>
+      <span class="brand__name">Azucarados <span>4 Patas</span></span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a class="nav__link nav__link--sec" href="{{ '/' | relative_url }}#las-4-p">Las 4 P</a>
+      <a class="nav__link nav__link--sec" href="{{ '/' | relative_url }}#quienes-somos">Quiénes somos</a>
+      <a class="nav__link nav__link--sec" href="{{ '/' | relative_url }}#la-red">La red</a>
+      <a class="nav__link" href="{{ '/blog/' | relative_url }}">Blog</a>
+      <a class="nav__ig" href="{{ site.instagram_url }}" target="_blank" rel="noopener">
+        <span>Instagram</span><span class="sr-only"> (se abre en una pestaña nueva)</span>
+      </a>
+    </nav>
+  </div>
+</header>

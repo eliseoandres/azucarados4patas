@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<article class="post wrap wrap--narrow" itemscope itemtype="https://schema.org/BlogPosting">
+  <nav class="crumbs" aria-label="Ruta">
+    <a href="{{ '/' | relative_url }}">Inicio</a> / <a href="{{ '/blog/' | relative_url }}">Dejando huella</a>
+  </nav>
+  <header class="post__head">
+    {% if page.tema %}<a class="tag" href="{{ '/blog/' | relative_url }}?tema={{ page.tema | slugify }}">{{ page.tema }}</a>{% endif %}
+    <h1 class="post__title" itemprop="headline">{{ page.title }}</h1>
+    {% if page.description %}<p class="post__lead">{{ page.description }}</p>{% endif %}
+    <p class="post__meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d/%-m/%Y" }}</time>
+      <span>Lectura de {{ content | number_of_words | divided_by: 200 | plus: 1 }} min</span>
+    </p>
+  </header>
+
+  <div class="prose" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <aside class="aviso aviso--post" aria-label="Aviso importante">
+    <strong>Esta nota es informativa.</strong>
+    No reemplaza la consulta veterinaria ni sirve para diagnosticar. Ante cualquier duda sobre la salud de tu perro o gato, consultá con tu veterinario de confianza.
+  </aside>
+
+  <section class="post__cta" aria-labelledby="cta-post">
+    <h2 id="cta-post">¿Te quedó una duda? Charlemos.</h2>
+    <p>Contanos tu caso por Instagram. Hay otras familias que ya pasaron por lo mismo y quieren acompañarte.</p>
+    {% include instagram-button.html label="Escribinos por Instagram" style="coral" %}
+  </section>
+
+  <p class="post__back"><a href="{{ '/blog/' | relative_url }}">Ver todas las notas</a></p>
+</article>
