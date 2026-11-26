@@ -5,7 +5,7 @@ description: >-
   Azucarados 4 Patas acompaña a tutores de perros y gatos con diabetes. Conocé las 4 P para detectar a tiempo,
   leé nuestras guías y sumate a la comunidad en Instagram.
 ---
-{%- assign guia = site.posts | where: "tema", "Síntomas" | last -%}
+{%- assign guia = site.posts | where: "tema", "Signos" | last -%}
 
 <!-- 1 · PORTADA -->
 <section class="hero" aria-labelledby="hero-titulo">
@@ -58,7 +58,7 @@ description: >-
         </span>
         <h3 class="p-card__title">Mucha orina</h3>
         <p class="p-card__term">Poliuria</p>
-        <p>Orina muchísimo: hay que cambiar la piedra sanitaria varias veces al día y el pis puede quedar pegajoso.</p>
+        <p>Orina muchísimo y el pis puede quedar pegajoso.</p>
       </li>
       <li class="p-card">
         <span class="p-card__ring" aria-hidden="true">
@@ -85,8 +85,8 @@ description: >-
         consultá cuanto antes.
       </p>
       <div class="aviso__actions">
-        <a class="btn btn--azul" href="{% if guia %}{{ guia.url | relative_url }}{% else %}{{ '/blog/' | relative_url }}{% endif %}"><span>Leer la guía completa</span></a>
-        {% include instagram-button.html label="Consultanos en Instagram" style="outline" %}
+        <a class="btn btn--azul" href="{% if guia %}{{ guia.url | relative_url }}{% else %}{{ '/blog/' | relative_url }}{% endif %}"><span>Lee las notas completas</span></a>
+        {% include instagram-button.html label="Encontranos en Instagram" style="outline" %}
       </div>
     </aside>
   </div>
@@ -105,11 +105,6 @@ description: >-
       <p>
         Hoy somos una comunidad de familias de distintas provincias que se acompañan de par a par.
       </p>
-      <p class="press">
-        Nos contaron en
-        <a href="https://lu5am.com/azucarados-4-patas-la-red-solidaria-que-ayuda-a-perros-y-gatos-con-diabetes/" target="_blank" rel="noopener">LU5<span class="sr-only"> (se abre en una pestaña nueva)</span></a>,
-        Radio Fantástica 91.7 y Country Magazine.
-      </p>
     </div>
     <ul class="trust" role="list">
       <li class="trust__item">
@@ -126,7 +121,7 @@ description: >-
       </li>
       <li class="trust__item">
         <h3>Presencia en la comunidad</h3>
-        <p>Desde 2024 sumamos charlas en escuelas, congresos veterinarios y encuentros en plazas.</p>
+        <p>Desde 2021 sumamos charlas en escuelas, congresos veterinarios y encuentros en plazas.</p>
       </li>
     </ul>
   </div>
@@ -154,7 +149,7 @@ description: >-
       </li>
       <li class="steps__item">
         <h3>Los insumos circulan</h3>
-        <p>Personas con diabetes donan lo que les sobra, en lugar de dejarlo vencer: insulina, tiras reactivas, glucómetros, agujas, lancetas y jeringas. Se reparten entre familias registradas con criterio equitativo.</p>
+        <p>Personas con diabetes donan lo que les sobra en lugar de dejarlo vencer: insulina, tiras reactivas, glucómetros, agujas, lancetas y jeringas. Se reparten entre familias registradas con criterio equitativo.</p>
       </li>
       <li class="steps__item">
         <h3>Seguimos cerca</h3>
