@@ -1,0 +1,234 @@
+---
+layout: default
+title: Una comunidad azul para tutores de perros y gatos con diabetes
+description: >-
+  Azucarados 4 Patas acompaña a tutores de perros y gatos con diabetes. Conocé las 4 P para detectar a tiempo,
+  leé nuestras guías y sumate a la comunidad en Instagram.
+---
+{%- assign guia = site.posts | where: "tema", "Síntomas" | last -%}
+
+<!-- 1 · PORTADA -->
+<section class="hero" aria-labelledby="hero-titulo">
+  <div class="wrap hero__grid">
+    <div class="hero__text">
+      <h1 id="hero-titulo" class="hero__title">No estás solo.<br>Somos una comunidad azul.</h1>
+      <p class="hero__lead">
+        Acompañamos a tutores de perros y gatos con diabetes. Compartimos información, experiencias y cuidados
+        para que nuestros azucarados puedan tener una vida plena y feliz.
+      </p>
+      <div class="hero__actions">
+        {% include instagram-button.html label="Escribinos por Instagram" style="coral" %}
+        <a class="btn btn--blanco" href="#las-4-p"><span>Conocé las 4 P</span></a>
+      </div>
+      <p class="hero__handle">
+        Nos encontramos todos los días en <a href="{{ site.instagram_url }}" target="_blank" rel="noopener">@{{ site.instagram }}</a>:
+        novedades, consultas y compañía.
+      </p>
+    </div>
+    <div class="hero__visual" aria-hidden="true">
+      <div class="ring ring--hero">{% include paw.html %}</div>
+      <p class="hero__note"><strong>Azucaradito:</strong> así les decimos con cariño a los perros y gatos con diabetes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · DETECCIÓN TEMPRANA: LAS 4 P -->
+<section class="sec sec--claro" id="las-4-p" aria-labelledby="p-titulo">
+  <div class="wrap">
+    <div class="sec__head">
+      <h2 id="p-titulo" class="sec__title">Las 4 P: cuatro señales que no conviene dejar pasar</h2>
+      <p class="sec__lead">
+        Detectar a tiempo marca la diferencia. Si tu perro o gato muestra una o más de estas señales,
+        pedí turno con tu veterinario de confianza y consultá por un análisis de glucosa.
+      </p>
+    </div>
+
+    <ul class="p-grid" role="list">
+      <li class="p-card">
+        <span class="p-card__ring" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7h24l-3.4 34H15.4z"/><path d="M13.6 23c3.4-2.6 6.6 2.6 10.4 0s6.8 2.6 10.4 0"/></svg>
+        </span>
+        <h3 class="p-card__title">Mucha sed</h3>
+        <p class="p-card__term">Polidipsia</p>
+        <p>Toma agua todo el tiempo y vacía el bebedero mucho más seguido de lo normal.</p>
+      </li>
+      <li class="p-card">
+        <span class="p-card__ring" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 7c-5 7-9 12-9 17.5a9 9 0 0 0 18 0C27 19 23 14 18 7z"/><path d="M35.5 24c-3 4-5 7-5 10a5 5 0 0 0 10 0c0-3-2-6-5-10z"/></svg>
+        </span>
+        <h3 class="p-card__title">Mucha orina</h3>
+        <p class="p-card__term">Poliuria</p>
+        <p>Orina muchísimo: hay que cambiar la piedra sanitaria varias veces al día y el pis puede quedar pegajoso.</p>
+      </li>
+      <li class="p-card">
+        <span class="p-card__ring" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 28h34a17 13 0 0 1-34 0z"/><circle cx="17" cy="21" r="3"/><circle cx="25" cy="17" r="3"/><circle cx="33" cy="21" r="3"/></svg>
+        </span>
+        <h3 class="p-card__title">Mucho apetito</h3>
+        <p class="p-card__term">Polifagia</p>
+        <p>Come todo el tiempo y pide más, como si nunca se sintiera satisfecho.</p>
+      </li>
+      <li class="p-card">
+        <span class="p-card__ring" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="9" width="34" height="31" rx="7"/><path d="M15.5 24a8.5 8.5 0 0 1 17 0z"/><path d="M24 24l-4-6"/></svg>
+        </span>
+        <h3 class="p-card__title">Pérdida de peso</h3>
+        <p class="p-card__term">La cuarta P</p>
+        <p>Come mucho pero adelgaza: se le marcan las costillas o pierde masa muscular.</p>
+      </li>
+    </ul>
+
+    <aside class="aviso" aria-label="Aviso importante">
+      <p>
+        <strong>Esto no es un diagnóstico.</strong>
+        Solo un veterinario puede confirmarlo con un análisis. Si además notás decaimiento, vómitos o que no quiere comer,
+        consultá cuanto antes.
+      </p>
+      <div class="aviso__actions">
+        <a class="btn btn--azul" href="{% if guia %}{{ guia.url | relative_url }}{% else %}{{ '/blog/' | relative_url }}{% endif %}"><span>Leer la guía completa</span></a>
+        {% include instagram-button.html label="Consultanos en Instagram" style="outline" %}
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- 3 · QUIÉNES SOMOS Y POR QUÉ CONFIAR -->
+<section class="sec" id="quienes-somos" aria-labelledby="quienes-titulo">
+  <div class="wrap split">
+    <div class="split__intro">
+      <h2 id="quienes-titulo" class="sec__title">Quiénes somos: tutores que ya pasaron por lo mismo</h2>
+      <p>
+        Azucarados 4 Patas nació en plena pandemia, entre tutores que acababan de recibir el diagnóstico de diabetes
+        de sus perros y gatos y no sabían por dónde empezar. Entre dudas, mensajes y mucha incertidumbre descubrimos algo:
+        nadie tiene que atravesarlo solo.
+      </p>
+      <p>
+        Hoy somos una comunidad de familias de distintas provincias que se acompañan de par a par.
+      </p>
+      <p class="press">
+        Nos contaron en
+        <a href="https://lu5am.com/azucarados-4-patas-la-red-solidaria-que-ayuda-a-perros-y-gatos-con-diabetes/" target="_blank" rel="noopener">LU5<span class="sr-only"> (se abre en una pestaña nueva)</span></a>,
+        Radio Fantástica 91.7 y Country Magazine.
+      </p>
+    </div>
+    <ul class="trust" role="list">
+      <li class="trust__item">
+        <h3>Experiencia real</h3>
+        <p>Convivimos con la diabetes de nuestros azucarados. Te contamos lo que vivimos, sin vueltas ni dramatismo.</p>
+      </li>
+      <li class="trust__item">
+        <h3>Acompañamiento de par a par</h3>
+        <p>Cuando llega el diagnóstico aparecen la angustia y la pregunta de si hicimos algo mal. Acá vas a encontrar a quien ya lo vivió.</p>
+      </li>
+      <li class="trust__item">
+        <h3>Cuidado responsable</h3>
+        <p>No somos veterinarios. Contamos con el asesoramiento de endocrinólogos especializados y siempre te pedimos consultar a tu veterinario y respetar el tratamiento indicado.</p>
+      </li>
+      <li class="trust__item">
+        <h3>Presencia en la comunidad</h3>
+        <p>Desde 2024 sumamos charlas en escuelas, congresos veterinarios y encuentros en plazas.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 4 · CÓMO FUNCIONA LA RED -->
+<section class="sec sec--crema" id="la-red" aria-labelledby="red-titulo">
+  <div class="wrap">
+    <div class="sec__head">
+      <h2 id="red-titulo" class="sec__title">Cómo funciona la red</h2>
+      <p class="sec__lead">
+        Todo pasa en un mismo lugar: nuestro Instagram. Sin formularios dispersos ni grupos paralelos,
+        para que siempre sepas dónde encontrarnos.
+      </p>
+    </div>
+
+    <ol class="steps">
+      <li class="steps__item">
+        <h3>Seguinos y escribinos</h3>
+        <p>Contanos tu situación por mensaje directo. Una persona de la comunidad te responde.</p>
+      </li>
+      <li class="steps__item">
+        <h3>Te orientamos</h3>
+        <p>Te explicamos el proceso vigente y qué documentación veterinaria hace falta, con el diagnóstico y el tratamiento indicado.</p>
+      </li>
+      <li class="steps__item">
+        <h3>Los insumos circulan</h3>
+        <p>Personas con diabetes donan lo que les sobra, en lugar de dejarlo vencer: insulina, tiras reactivas, glucómetros, agujas, lancetas y jeringas. Se reparten entre familias registradas con criterio equitativo.</p>
+      </li>
+      <li class="steps__item">
+        <h3>Seguimos cerca</h3>
+        <p>Las novedades, los agradecimientos y el intercambio de todos los días ocurren en el feed y las historias.</p>
+      </li>
+    </ol>
+
+    <div class="red-foot">
+      <div>
+        <h3 class="red-foot__title">Qué vas a encontrar en nuestro Instagram</h3>
+        <ul class="chips" role="list">
+          <li>Información sencilla sobre diabetes animal</li>
+          <li>Cómo donar y cómo pedir ayuda</li>
+          <li>Historias azucaradas</li>
+          <li>Campañas, charlas y encuentros</li>
+        </ul>
+        <p class="red-foot__note">La ayuda depende de las donaciones que recibimos, por eso no podemos prometer disponibilidad inmediata de insumos.</p>
+      </div>
+      <div class="red-foot__cta">
+        {% include instagram-button.html label="Sumate en Instagram" style="azul" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · BLOG: DEJANDO HUELLA -->
+<section class="sec" id="blog" aria-labelledby="blog-titulo">
+  <div class="wrap">
+    <div class="sec__head">
+      <h2 id="blog-titulo" class="sec__title">Dejando huella: guías y notas</h2>
+      <p class="sec__lead">Respuestas claras para dudas reales sobre la vida con diabetes animal.</p>
+    </div>
+
+    <ul class="chips chips--links" role="list" aria-label="Temas del blog">
+      {% for t in site.data.temas %}
+      <li><a href="{{ '/blog/' | relative_url }}?tema={{ t | slugify }}">{{ t }}</a></li>
+      {% endfor %}
+    </ul>
+
+    {% if site.posts.size > 0 %}
+    <ul class="cards" role="list">
+      {% for post in site.posts limit:3 %}
+      <li class="card">
+        {% if post.tema %}<span class="tag">{{ post.tema }}</span>{% endif %}
+        <h3 class="card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.description | default: post.excerpt | strip_html | truncate: 150 }}</p>
+        <p class="card__meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d/%-m/%Y" }}</time></p>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="empty">Estamos preparando las primeras notas. Mientras tanto, te esperamos en Instagram.</p>
+    {% endif %}
+
+    <p class="sec__more"><a class="btn btn--azul" href="{{ '/blog/' | relative_url }}"><span>Ver todas las notas</span></a></p>
+  </div>
+</section>
+
+<!-- 6 · CIERRE AZUL -->
+<section class="cierre" aria-labelledby="cierre-titulo">
+  <div class="wrap cierre__grid">
+    <div>
+      <h2 id="cierre-titulo" class="cierre__title">Ningún azucarado está solo</h2>
+      <p class="cierre__lead">
+        Un diagnóstico no es una condena: con cuidados, información y una comunidad cerca, tu compañero de cuatro patas
+        puede tener una vida plena. Esta casa tiene la puerta abierta.
+      </p>
+      {% include instagram-button.html label="Sumate a la comunidad en Instagram" style="coral" %}
+    </div>
+    <nav class="cierre__links" aria-label="Secciones del sitio">
+      <a href="#las-4-p">Las 4 P</a>
+      <a href="#quienes-somos">Quiénes somos</a>
+      <a href="#la-red">Cómo funciona la red</a>
+      <a href="{{ '/blog/' | relative_url }}">Blog: Dejando huella</a>
+    </nav>
+  </div>
+</section>

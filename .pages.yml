@@ -1,0 +1,48 @@
+# Configuración de Pages CMS (https://pagescms.org)
+# Permite crear y editar artículos desde el navegador, sin tocar código.
+media:
+  input: assets/img/blog
+  output: /assets/img/blog
+
+content:
+  - name: posts
+    label: Artículos del blog
+    type: collection
+    path: _posts
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, date, tema]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Título
+        type: string
+        required: true
+      - name: date
+        label: Fecha de publicación
+        type: date
+        required: true
+      - name: tema
+        label: Tema
+        type: select
+        options:
+          values:
+            - Síntomas
+            - Rutina diaria
+            - Cuidados
+            - Mitos frecuentes
+            - Vida con diabetes animal
+      - name: description
+        label: Resumen (se ve en Google y al compartir)
+        type: text
+        required: true
+      - name: image
+        label: Imagen para redes (opcional)
+        type: image
+      - name: body
+        label: Contenido
+        type: rich-text
