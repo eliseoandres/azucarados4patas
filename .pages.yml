@@ -31,7 +31,7 @@ content:
         type: select
         options:
           values:
-            - Síntomas
+            - Signos
             - Rutina diaria
             - Cuidados
             - Mitos frecuentes
