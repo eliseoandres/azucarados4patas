@@ -1,8 +1,10 @@
 ---
 title: "Las 4 P de la diabetes en perros y gatos: cómo reconocer las señales a tiempo"
 date: 2026-11-25
-tema: Síntomas
-description: "Mucha sed, mucha orina, mucho apetito y pérdida de peso: las cuatro señales que conviene conocer para consultar a tiempo con tu veterinario."
+tema: Signos
+description: "Mucha sed, mucha orina, mucho apetito y pérdida de peso: las
+  cuatro señales que conviene conocer para consultar a tiempo con tu
+  veterinario."
 ---
 Cuando un perro o un gato tiene diabetes, su cuerpo no logra aprovechar bien el azúcar (la glucosa) y esta se acumula en la sangre. La buena noticia es que suele dar señales visibles en el día a día. Se las conoce como **las 4 P**, y reconocerlas a tiempo permite consultar antes.
 
@@ -44,3 +46,4 @@ Muchas familias, cuando reciben la noticia, sienten angustia y se preguntan si h
 Con ese apoyo, muchos perros y gatos con diabetes pueden tener una vida plena y feliz. Y no hace falta transitarlo solo: en nuestra comunidad hay familias que ya pasaron por lo mismo.
 
 > **Para guardar:** mucha sed, mucha orina, mucho apetito y pérdida de peso. Si ves una o más, veterinario y análisis de glucosa.
+
